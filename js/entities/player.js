@@ -29,12 +29,15 @@ class player extends yentity
     
     if (keyDown('a')) {
         t.move_by(-t.speed, 0);
+        return;
     }
     if (keyDown('d')) {
         t.move_by(t.speed, 0);
+        return;
     }
     if (keyDown('s')) {
         t.move_by(0, t.speed);
+        return;
     }
     if (keyDown('w')) {
         t.move_by(0, -t.speed);

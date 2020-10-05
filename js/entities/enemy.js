@@ -24,6 +24,7 @@ class enemy extends yentity
     this.ty = Math.floor(this.y/this.th)
     t.get_path();
     t.move()
+    t.hit()
   }//end update
   move()
   {
@@ -52,6 +53,10 @@ class enemy extends yentity
    // console.log(this.ty,this.tx, pty, ptx,this.move_path)
     this.path_pos = 1
   }//end get_path
+  hit() {
+    var t = this;
+    t.collide("enemy",0,0)
+  }//end hit
   
   
 }//end class
